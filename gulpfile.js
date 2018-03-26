@@ -63,7 +63,7 @@ gulp.task('distribute_android_debug_to_aws', function (cb) {
   });
 })
 
-// Platform Commands
+// All Platform Commands
 
 // Platform Commands (Browser)
 
@@ -141,7 +141,6 @@ gulp.task('ionic_cordova_emulate_android', function (cb) {
   });
 });
 
-
 gulp.task('deploy_android', function (cb) {
   runSequence('ionic_cordova_build_andriod_release', 'distribute_android_release_to_aws', cb);
 });
@@ -188,8 +187,8 @@ var smtpInfoAws = {
   port: 587
 };
 
-gulp.task('email_distribution', function () {
-  return gulp.src('./mymailmessage.html')
+gulp.task('distribution_email_notification', function () {
+  return gulp.src('./distribution/html/mobileDistributionEmailMessage.html')
     .pipe(mail({
       subject: 'Mobile App Version 2.0 Distribution',
       to: [
@@ -208,12 +207,12 @@ var smtpInfoMochahost = {
     pass: "timber91"
   },
   host: "mail.soaconsultingservices.com",
-  secureConnection: true,
+  secureConnection: false,
   port: 2525
 };
 
-gulp.task('email_attachment', function () {
-  return gulp.src('./mymailmessage.html')
+gulp.task('distribution_email_attachment_notification', function () {
+  return gulp.src('./distribution/html/mobileDistributionEmailAttachedMessage.html')
     .pipe(mailing({
       subject: 'Mobile App Version 2.0 Now Available ',
       to: [
@@ -222,9 +221,9 @@ gulp.task('email_attachment', function () {
       from: 'steve@soaconsultingservices.com',
       attachments: [
         {
-          path: 'app-release.apk'
+          path: 'platforms\\android\\app\\build\\outputs\\apk\\release\\app-release.apk'
         }
       ],
-      smtp: smtpInfoMochahost
+      smtp: smtpInfoAws
     }));
 });
