@@ -11,7 +11,9 @@ npm install ionic cordova -g
 ## Project creation process
 
 ionic start MyIonicTabsCordovaProject tabs
+
 integrate with cordova? Y
+
 cd MyIonicTabsCordovaProject
 
 ## cordova platform add
