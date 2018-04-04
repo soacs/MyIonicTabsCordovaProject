@@ -4,6 +4,20 @@
 This project was generated with Ionic 3.2 CLI
 Basic used for a source to the GULP script that can be used and configured in Webstorm IDE
 
+## Node packages install
+
+npm install ionic cordova -g
+
+## Project creation process
+
+ionic start MyIonicTabsCordovaProject tabs
+integrate with cordova? Y
+cd MyIonicTabsCordovaProject
+
+## cordova platform add
+
+ionic cordova platform add android
+
 ## Development server
 
 Run `ionic serve` for a dev server. Navigate to `http://localhost:8100/`. The app will automatically reload if you change any of the source files.
