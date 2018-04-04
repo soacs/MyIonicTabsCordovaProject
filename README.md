@@ -29,20 +29,12 @@ To get more help on the Cordova CLI use `cordova --help` or check out https://co
 To install gulp in a node environment to support this script, do the following:
 
 npm install -g gulp
-
 npm install -g gulp-clean
-
 npm install -g gulp-run-sequence
-
 npm install -g child_process
-
 npm install -g require-dir
-
 npm install -g gulp-mail
-
 npm install -g gulp-util
-
 npm install -g vinyl-ftp
-
 npm install -g gulp-mailing
 
