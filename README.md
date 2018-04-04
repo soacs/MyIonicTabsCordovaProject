@@ -16,7 +16,7 @@ integrate with cordova? Y
 
 cd MyIonicTabsCordovaProject
 
-## cordova platform add
+## Add Cordova Platform
 
 ionic cordova platform add android
 
