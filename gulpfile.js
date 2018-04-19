@@ -221,7 +221,7 @@ gulp.task('distribution_email_attachment_notification', function () {
       from: 'steve@soaconsultingservices.com',
       attachments: [
         {
-          path: 'platforms\\android\\app\\build\\outputs\\apk\\release\\app-release.apk'
+          path: 'app-release.apk'
         }
       ],
       smtp: smtpInfoAws

@@ -13,6 +13,9 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
+      console.log("Platform is tablet?: " + platform.is('tablet'));
+      console.log("Platforms are listed as: " + platform.platforms());
+      console.log("Current URL is: " + platform.url());
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
